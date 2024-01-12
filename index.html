@@ -1,18 +1,96 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JuliaBaysCPS592</title>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-        <link rel="stylesheet" href="phone.css">
-    </head>
 
-    <body>
-        <h1>Hi update content of page</h1>
-        <div id="tab_bar"> 
-            <button></button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuliaBaysCPS592</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--link to the js-->
+    <script src="local.js"></script>
+    <!--link to the css -->
+    <link rel="stylesheet" href="phone.css" type="text/css" />
+</head>
+
+<body>
+    <div id="tab_bar">
+        <button class="tabButton" id="tab1">Dialer</button>
+        <button class="tabButton" id="tab2">Contacts</button>
+        <button class="tabButton" id="tab3">Add Contact</button>
+    </div>
+    <br>
+    <br>
+    <div id="content">
+        <!-- Tab1: dialer UI with numbers and text field and clear button -->
+        <div id="dialer">
+            <input type="text" id="dialerText" value="" placeholder="000-000-0000" oninput="validateInput(this)">
+            <br>
+            <table>
+                <tr>
+                    <button id="dial1">1</button>
+                    <button id="dial2">2</button>
+                    <button id="dial3">3</button>
+                </tr>
+                <br>
+                <tr>
+                    <button id="dial4">4</button>
+                    <button id="dial5">5</button>
+                    <button id="dial6">6</button>
+                </tr>
+                <br>
+                <tr>
+                    <button id="dial7">7</button>
+                    <button id="dial8">8</button>
+                    <button id="dial9">9</button>
+                </tr>
+                <br>
+                <tr>
+                    <button id="dialClear">Clear</button>
+                    <button id="dial0">0</button>
+                    <button id="dialDial">Dial</button>
+                </tr>
+            </table>
         </div>
-        <script src="phone.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </body>
+        <br>
+        <br>
+    </div>
+
+    <div id="contact_content">
+
+        <!-- Tab2:List of Contacts -->
+        <ul id="contact_list">
+            Julia Bays <br>
+            Leo Bays <br>
+            Mom <br>
+            Dad <br>
+            Aaron Eklon <br>
+            Katie Adams<br>
+        </ul>
+        
+
+        <!-- Tab3:Form for adding contacts -->
+        <div id="newContact">
+            <form class="pure-form pure-form-stacked">
+                <label for="name">Name</label>
+                <input id="name" placeholder="Name">
+                <label for="number">Phone Number</label>
+                <input id="number" placeholder="000-000-0000" oninput="validateInput(this)">
+                <label for="email">Email</label>
+                <input id="email" placeholder="fullname@email.com">
+                <button id="addContact">Add</button>
+                <button id="clearForm">Clear Form</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="phone.js"></script>
+</body>
+
 </html>
