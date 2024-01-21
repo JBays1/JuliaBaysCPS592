@@ -11,7 +11,7 @@ app.use(express.static(__dirname));
 
 app.get('/', (request, response) => {
     console.log("Got an HTTP request");
-    response.sendFile(path.join(__dirname, '/index.html'));
+    response.sendFile(path.join(__dirname, '/base.html'));
 });
 
 io.on("connection", (socketclient) => {
