@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background color */
+}
+
+h1 {
+    color: #333;
+}
+
+#tab_bar {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabButton {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.tabButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    color: #fff;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+/* Dialer style */
+#dialer {
+    text-align: center;
+}
+
+#dialerText {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+table {
+    margin-top: 10px;
+}
+
+table button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+table button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact list style */
+#contact_list {
+    text-align: center;
+}
+
+#newContact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form style */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #007bff;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 50%; /* Increased to make it more round */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific color dial buttons */
+#dialClear,
+#dialDial,
+#addContact,
+#clearForm {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+#dialClear {
+    background-color: rgb(249, 80, 80);
+}
+
+#dialClear:hover {
+    background-color: rgb(203, 42, 42);
+}
+
+#dialDial {
+    background-color: rgb(25, 161, 25);
+}
+
+#dialDial:hover {
+    background-color: rgb(13, 105, 13);
+}
+
+#addContact,
+#clearForm {
+    background-color: #007bff;
+}
+
+#addContact:hover,
+#clearForm:hover {
+    background-color: #0056b3;
+}
