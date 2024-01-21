@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("dialer").style.display = "block";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "none";
+    document.getElementById("testgestures").style.display = "none";
 });
 
 // Tab Buttons
@@ -14,6 +15,7 @@ document.getElementById("tab1").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "block";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "none";
+    document.getElementById("testgestures").style.display = "none";
 });
 
 document.getElementById("tab2").addEventListener("click", function(event) {
@@ -22,6 +24,7 @@ document.getElementById("tab2").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "none";
     document.getElementById("contact_list").style.display = "block";
     document.getElementById("newContact").style.display = "none";
+    document.getElementById("testgestures").style.display = "none";
 });
 
 document.getElementById("tab3").addEventListener("click", function(event) {
@@ -30,6 +33,16 @@ document.getElementById("tab3").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "none";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "block";
+    document.getElementById("testgestures").style.display = "none";
+});
+
+document.getElementById("tab4").addEventListener("click", function(event) {
+    // when "tab4" is clicked
+    event.preventDefault(); // Prevent default form submission behavior
+    document.getElementById("dialer").style.display = "none";
+    document.getElementById("contact_list").style.display = "none";
+    document.getElementById("newContact").style.display = "none";
+    document.getElementById("testgestures").style.display = "block";
 });
 
 // Function to validate input and allow only numbers
@@ -175,5 +188,39 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("clearForm").addEventListener("click", function (event) {
         event.preventDefault(); // Prevent default form submission behavior
         clearForm(); // Call the clearForm function
+    });
+});
+
+// Gesture buttons/recognition
+document.addEventListener("DOMContentLoaded", function () {
+    let isMouseDown = false;
+    let startX, endX;
+
+    const gestureArea = document.getElementById('gestureArea');
+
+    gestureArea.addEventListener('mousedown', (event) => {
+        isMouseDown = true;
+        startX = event.clientX;
+    });
+
+    gestureArea.addEventListener('mousemove', (event) => {
+        if (isMouseDown) {
+            endX = event.clientX;
+        }
+    });
+
+    gestureArea.addEventListener('mouseup', () => {
+        if (isMouseDown) {
+            isMouseDown = false;
+            const deltaX = endX - startX;
+
+            if (deltaX > 0) {
+                console.log('Swipe right');
+            } else if (deltaX < 0) {
+                console.log('Swipe left');
+            } else {
+                console.log('Mouse released without swipe');
+            }
+        }
     });
 });

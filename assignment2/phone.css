@@ -150,3 +150,16 @@ button:hover {
 #clearForm:hover {
     background-color: #0056b3;
 }
+
+/* gestures area */
+#gestureArea {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
