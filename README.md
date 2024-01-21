@@ -5,9 +5,9 @@
 # Github access page:
 https://jbays1.github.io/JuliaBaysCPS592/
 
-#Goto assignments: 
-- https://jbays1.github.io/JuliaBaysCPS592/assignment1
-- https://jbays1.github.io/JuliaBaysCPS592/assignment2
+# Goto assignments:
+- [Assignment 1](https://jbays1.github.io/JuliaBaysCPS592/assignment1)
+- [Assignment 2](https://jbays1.github.io/JuliaBaysCPS592/assignment2)
 
 # Access local:
 $ node local.js
