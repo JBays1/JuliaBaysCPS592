@@ -195,32 +195,42 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     let isMouseDown = false;
     let startX, endX;
+    const outputBox = document.getElementById('outputBox');
 
-    const gestureArea = document.getElementById('gestureArea');
+    // Set initial text to "Ready"
+    outputBox.textContent = 'Ready';
 
-    gestureArea.addEventListener('mousedown', (event) => {
+    function startGesture(event) {
         isMouseDown = true;
         startX = event.clientX;
-    });
+        outputBox.textContent = 'Detected: Mouse down';
+    }
 
-    gestureArea.addEventListener('mousemove', (event) => {
+    function trackGesture(event) {
         if (isMouseDown) {
             endX = event.clientX;
-        }
-    });
-
-    gestureArea.addEventListener('mouseup', () => {
-        if (isMouseDown) {
-            isMouseDown = false;
             const deltaX = endX - startX;
 
             if (deltaX > 0) {
-                console.log('Swipe right');
+                outputBox.textContent = 'Detected: Swipe right';
             } else if (deltaX < 0) {
-                console.log('Swipe left');
+                outputBox.textContent = 'Detected: Swipe left';
             } else {
-                console.log('Mouse released without swipe');
+                outputBox.textContent = 'Detected: Mouse move';
             }
         }
-    });
+    }
+
+    function endGesture() {
+        if (isMouseDown) {
+            isMouseDown = false;
+            outputBox.textContent = 'Detected: Mouse up';
+        }
+    }
+
+    const gestureArea = document.getElementById('gestureArea');
+    gestureArea.addEventListener('mousedown', startGesture);
+    gestureArea.addEventListener('mousemove', trackGesture);
+    gestureArea.addEventListener('mouseup', endGesture);
 });
+

@@ -88,11 +88,19 @@
             </form>
         </div>
 
-        <!-- Tab3:Form for adding contacts -->
+        <!-- Tab4: Gestures Area -->
         <div id="testgestures">
-            <div id="gestureArea">Click and drag here</div>
+            <h1>Gesture Practice</h1>
+        <div id="gestureArea" onmousedown="startGesture(event)" onmousemove="trackGesture(event)" onmouseup="endGesture()">
+            Click and drag here
+        </div>
+        <div id="outputBox">
+            Ready <!-- Initial text -->
         </div>
     </div>
+</div>
+
+
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
