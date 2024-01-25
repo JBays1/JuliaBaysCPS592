@@ -12,8 +12,10 @@ This course focuses on exploring input and interaction techniques, with a strong
 [Julia Bays Github Site](https://jbays1.github.io/JuliaBaysCPS592/)
 
 ## Assignment Links
-- [Assignment 1](https://jbays1.github.io/JuliaBaysCPS592/assignment1) Basic mock phone dialer, contact info, and add info
-- [Assignment 2](https://jbays1.github.io/JuliaBaysCPS592/assignment2) Adding a tab for gesture reading techniques with a mouse and keyboard
+- [Assignment 1](https://jbays1.github.io/JuliaBaysCPS592/assignment1) 
+- Basic mock phone dialer, contact info, and add info
+- [Assignment 2](https://jbays1.github.io/JuliaBaysCPS592/assignment2) 
+- Adding a tab for gesture reading techniques with a mouse and keyboard
 
 ## Local Access
 ```bash
