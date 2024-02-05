@@ -14,96 +14,90 @@
     <!--link to the js-->
     <script src="local.js"></script>
     <!--link to the css -->
-    <link rel="stylesheet" href="phone.css" type="text/css" />
+    <link rel="stylesheet" href="blog.css" type="text/css" />
 </head>
 
 <body>
-    <div id="tab_bar">
-        <button class="tabButton" id="tab1">Dialer</button>
-        <button class="tabButton" id="tab2">Contacts</button>
-        <button class="tabButton" id="tab3">Add Contact</button>
-        <button class="tabButton" id="tab4">Test Gestures</button>
-    </div>
-    <br>
-    <br>
-    <div id="content">
-        <!-- Tab1: dialer UI with numbers and text field and clear button -->
-        <div id="dialer">
-            <input type="text" id="dialerText" value="" placeholder="000-000-0000" oninput="validateInput(this)">
-            <br>
-            <table>
-                <tr>
-                    <button id="dial1">1</button>
-                    <button id="dial2">2</button>
-                    <button id="dial3">3</button>
-                </tr>
-                <br>
-                <tr>
-                    <button id="dial4">4</button>
-                    <button id="dial5">5</button>
-                    <button id="dial6">6</button>
-                </tr>
-                <br>
-                <tr>
-                    <button id="dial7">7</button>
-                    <button id="dial8">8</button>
-                    <button id="dial9">9</button>
-                </tr>
-                <br>
-                <tr>
-                    <button id="dialClear">Clear</button>
-                    <button id="dial0">0</button>
-                    <button id="dialDial">Dial</button>
-                </tr>
-            </table>
-        </div>
-        <br>
-        <br>
-    </div>
 
-    <div id="contact_content">
+<!-- Navigation Tab Buttons -->
+<div id="tab_bar">
+    <button class="tabButton" id="tab1" role="link" aria-label="Home">Home</button>
+    <button class="tabButton" id="tab2" role="link" aria-label="Projects">Archive</button>
+    <button class="tabButton" id="tab3" role="link" aria-label="About">About this Blog</button>
+</div>
 
-        <!-- Tab2:List of Contacts -->
-        <ul id="contact_list">
-            Julia Bays <br>
-            Leo Bays <br>
-            Mom <br>
-            Dad <br>
-            Aaron Eklon <br>
-            Katie Adams<br>
-        </ul>
+<!-- Content Sections -->
+<div id="home" class="tabContent">
+    <h1>Julia Bays' Blog</h1>
+
+    <!-- Blog Post Section -->
+    <div class="post">
+        <div class="post-content">
+            <h2 class="post-title">Classic Sugar Cookie Recipe</h2>
+            <p class="post-meta">Published on February 5, 2024</p>
+            <p>
+                These classic sugar cookies are perfect for any occasion. Follow this simple recipe to create delicious homemade cookies that everyone will love.
+            </p>
         
-
-        <!-- Tab3:Form for adding contacts -->
-        <div id="newContact">
-            <form class="pure-form pure-form-stacked">
-                <label for="name">Name</label>
-                <input id="name" placeholder="Name">
-                <label for="number">Phone Number</label>
-                <input id="number" placeholder="000-000-0000" oninput="validateInput(this)">
-                <label for="email">Email</label>
-                <input id="email" placeholder="fullname@email.com">
-                <button id="addContact">Add</button>
-                <button id="clearForm">Clear Form</button>
-            </form>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>2 3/4 cups all-purpose flour</li>
+                <li>1 teaspoon baking soda</li>
+                <li>1/2 teaspoon baking powder</li>
+                <li>1 cup unsalted butter, softened</li>
+                <li>1 1/2 cups white sugar</li>
+                <li>1 egg</li>
+                <li>1 teaspoon vanilla extract</li>
+                <li>1/2 teaspoon almond extract (optional)</li>
+                <li>3 to 4 tablespoons buttermilk</li>
+                <li>Sprinkles or colored sugar for decoration (optional)</li>
+            </ul>
+        
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Preheat your oven to 375°F (190°C) and line baking sheets with parchment paper.</li>
+                <li>In a medium bowl, whisk together the flour, baking soda, and baking powder. Set aside.</li>
+                <li>In a large mixing bowl, cream together the softened butter and sugar until light and fluffy.</li>
+                <li>Add the egg, vanilla extract, and almond extract (if using) to the butter mixture. Mix well.</li>
+                <li>Gradually add the dry ingredients to the wet ingredients, mixing until well combined. If the dough is too dry, add buttermilk, one tablespoon at a time, until the dough comes together.</li>
+                <li>Roll the dough into small balls and place them on the prepared baking sheets, leaving space between each cookie.</li>
+                <li>Flatten each cookie slightly with the bottom of a glass and, if desired, decorate with sprinkles or colored sugar.</li>
+                <li>Bake for 8 to 10 minutes or until the edges are lightly golden. Be careful not to overbake.</li>
+                <li>Allow the cookies to cool on the baking sheets for a few minutes before transferring them to a wire rack to cool completely.</li>
+                <li>Enjoy your delicious homemade sugar cookies!</li>
+            </ol>
         </div>
-
-        <!-- Tab4: Gestures Area -->
-        <div id="testgestures">
-            <h1>Gesture Practice</h1>
-        <div id="gestureArea" onmousedown="startGesture(event)" onmousemove="trackGesture(event)" onmouseup="endGesture()">
-        </div>
-        <div id="outputBox">
-            Ready <!-- Initial text -->
-        </div>
+        
     </div>
 </div>
 
+<div id="projects" class="tabContent">
+    <h2>Assignment Links</h2>
 
-    
+    <ul>
+        <li>
+            <strong>Assignment 1: Basic mock phone dialer, contact info, and add info</strong>
+            <a href="https://jbays1.github.io/JuliaBaysCPS592/assignment1">
+                Assignment1
+            </a>
+        </li>
+        <li>
+            <strong>Assignment 2: Adding a tab for gesture reading techniques with a mouse and keyboard</strong>
+            <a href="https://jbays1.github.io/JuliaBaysCPS592/assignment2">
+                Assignment2
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="about" class="tabContent">
+    <!-- Content for the About tab -->
+    <h2>About Section</h2>
+    <!-- Add your content here -->
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="phone.js"></script>
+    <script src="blog.js"></script>
 </body>
 
 </html>

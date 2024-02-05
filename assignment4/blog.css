@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center; /* Center the h1 text */
+}
+
+/* Navigation Tab Buttons */
+#tab_bar {
+    background-color: #3498db; /* Use your preferred shade of blue */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    role: navigation; /* Add a semantic role for better accessibility */
+}
+
+.tabButton {
+    background-color: #3498db; /* Use the same shade of blue as the background */
+    color: #fff; /* White text to contrast with the blue background */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for better user experience */
+}
+
+/* Improve focus styles for better keyboard navigation */
+.tabButton:focus {
+    outline: 2px solid #fff; /* White outline on focus for better visibility */
+}
+
+/* Hover effect */
+.tabButton:hover,
+.tabButton:focus {
+    background-color: #2980b9; /* Use a slightly darker shade of blue on hover or focus */
+}
+
+
+.post {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.post-title {
+    font-size: 24px;
+    color: #444;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.post-content {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* links/projects css*/
+#projects h2 {
+    color: #333; /* Dark text color for the heading */
+}
+
+#projects ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding for the list */
+}
+
+#projects li {
+    margin-bottom: 15px; /* Add some space between list items */
+}
+
+#projects a {
+    color: #3498db; /* Blue color for the links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make the link text bold */
+    transition: color 0.3s; /* Smooth transition for link color change */
+}
+
+#projects a:hover {
+    color: #2980b9; /* Slightly darker blue on hover */
+}
