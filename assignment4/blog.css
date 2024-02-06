@@ -3,16 +3,17 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #fff; /* Set background color to white */
 }
 
 h1 {
-    color: #333;
     text-align: center; /* Center the h1 text */
 }
 
 /* Navigation Tab Buttons */
 #tab_bar {
-    background-color: #3498db; /* Use your preferred shade of blue */
+    background-color: #007bb5; /* Adjusted blue color for better contrast */
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -20,7 +21,7 @@ h1 {
 }
 
 .tabButton {
-    background-color: #3498db; /* Use the same shade of blue as the background */
+    background-color: #007bb5; /* Adjusted blue color for better contrast */
     color: #fff; /* White text to contrast with the blue background */
     border: none;
     padding: 10px 15px;
@@ -38,19 +39,19 @@ h1 {
 /* Hover effect */
 .tabButton:hover,
 .tabButton:focus {
-    background-color: #2980b9; /* Use a slightly darker shade of blue on hover or focus */
+    background-color: #005d8e; /* Adjusted slightly darker blue on hover or focus */
 }
-
 
 .post {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #f9f9f9; /* Set background color to a light gray */
 }
 
 .post-title {
     font-size: 24px;
-    color: #444;
 }
 
 .post-meta {
@@ -60,7 +61,6 @@ h1 {
 
 .post-content {
     margin-top: 10px;
-    color: #555;
 }
 
 /* links/projects css*/
@@ -68,24 +68,14 @@ h1 {
     color: #333; /* Dark text color for the heading */
 }
 
-#projects ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding for the list */
-}
-
-#projects li {
-    margin-bottom: 15px; /* Add some space between list items */
-}
-
 #projects a {
-    color: #3498db; /* Blue color for the links */
-    text-decoration: none; /* Remove underline from links */
+    color: #007bb5; /* Adjusted blue color for the links */
     font-weight: bold; /* Make the link text bold */
     transition: color 0.3s; /* Smooth transition for link color change */
 }
 
 #projects a:hover {
-    color: #2980b9; /* Slightly darker blue on hover */
+    color: #005d8e; /* Adjusted slightly darker blue on hover */
 }
 
 table {
@@ -93,14 +83,17 @@ table {
     margin: 20px auto;
     border-collapse: collapse;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
 }
+
 /* Comment Form */
 #commentForm {
     margin-top: 20px;
@@ -109,6 +102,7 @@ th {
 #commentForm label {
     display: block;
     margin-bottom: 5px;
+    color: #333; /* Adjust text color for better contrast */
 }
 
 #commentForm input[type="text"],
@@ -117,12 +111,16 @@ th {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #fff; /* Set background color to white */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 5px;
 }
 
 #commentForm button {
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #3498db;
+    background-color: #007bb5; /* Adjusted blue color for the button */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -138,17 +136,14 @@ th {
     margin-bottom: 20px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    color: #333; /* Adjust text color for better contrast */
 }
 
 .comment p {
     margin: 5px 0;
 }
 
-.comment .name {
-    font-weight: bold;
-}
-
+.comment .name,
 .comment .email {
     font-weight: bold;
 }
-
