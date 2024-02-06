@@ -31,6 +31,8 @@
     <h1>Julia Bays' Blog</h1>
 
     <!-- Blog Post Section -->
+    <img src="Picture1.jpg" alt="Sugar Cookie Image" style="width: 40%; max-width: 270px; display: block; margin: 10px auto;" />
+        <p style="text-align: center; font-style: italic;">Image source: Microsoft Word stock images</p>
     <div class="post">
         <div class="post-content">
             <h2 class="post-title">Classic Sugar Cookie Recipe</h2>
@@ -67,6 +69,22 @@
                 <li>Enjoy your delicious homemade sugar cookies!</li>
             </ol>
         </div>
+
+        <h3>Add a Comment:</h3>
+
+        <!-- Comment Form -->
+        <form id="commentForm">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="comment">Leave a comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <button type="button" onclick="submitComment()">Submit</button>
+        </form>
+
+        <!-- Display Comments -->
+        <div id="comments"></div>
         
     </div>
 </div>
@@ -87,12 +105,26 @@
                 Assignment2
             </a>
         </li>
+        <li>
+            <strong>Assignment 4: Basic blog application to go through accessibility reader and make adjustments</strong>
+            <a href="https://jbays1.github.io/JuliaBaysCPS592/assignment4">
+                Assignment4
+            </a>
+            <br>
+            <a href="http://wave.webaim.org">
+                Accessibility Checker
+            </a>
+        </li>
     </ul>
 </div>
 
 <div id="about" class="tabContent">
     <!-- Content for the About tab -->
     <h2>About Section</h2>
+
+    <p>
+        This blog is by Julia Bays, the goal of this website is to create a simple blog application that goes through an accessibility checker
+    </p>
     <!-- Add your content here -->
 </div>
 

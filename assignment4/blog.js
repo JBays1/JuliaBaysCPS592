@@ -27,3 +27,38 @@ document.getElementById("tab3").addEventListener("click", function(event) {
     event.preventDefault();
     showTab("about");
 });
+
+/* Comment function */
+function submitComment() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var comment = document.getElementById("comment").value;
+
+    if (comment.trim() !== "") {
+        // Display the alert
+        alert("Thank you for your comment!");
+
+        // Display the comment below
+        var commentsContainer = document.getElementById("comments");
+        var newComment = document.createElement("div");
+        newComment.classList.add("comment");
+
+        var commenterInfo = document.createElement("p");
+        commenterInfo.innerHTML = "<span class='name'>Name: " + name + "</span>, <span class='email'>Email: " + email + "</span>";
+
+        var commentContent = document.createElement("p");
+        commentContent.textContent = comment;
+
+        newComment.appendChild(commenterInfo);
+        newComment.appendChild(commentContent);
+        commentsContainer.appendChild(newComment);
+
+        // Clear the form fields after submitting
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("comment").value = "";
+    } else {
+        alert("Please enter a comment before submitting.");
+    }
+}
+
