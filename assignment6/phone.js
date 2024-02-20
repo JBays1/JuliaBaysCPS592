@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("dialer").style.display = "block";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "none";
-    document.getElementById("testgestures").style.display = "none";
+    document.getElementById("aboutarea").style.display = "none";
 });
 
 // Tab Buttons
@@ -15,7 +15,7 @@ document.getElementById("tab1").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "block";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "none";
-    document.getElementById("testgestures").style.display = "none";
+    document.getElementById("aboutarea").style.display = "none";
 });
 
 document.getElementById("tab2").addEventListener("click", function(event) {
@@ -24,7 +24,7 @@ document.getElementById("tab2").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "none";
     document.getElementById("contact_list").style.display = "block";
     document.getElementById("newContact").style.display = "none";
-    document.getElementById("testgestures").style.display = "none";
+    document.getElementById("aboutarea").style.display = "none";
 });
 
 document.getElementById("tab3").addEventListener("click", function(event) {
@@ -33,7 +33,7 @@ document.getElementById("tab3").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "none";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "block";
-    document.getElementById("testgestures").style.display = "none";
+    document.getElementById("aboutarea").style.display = "none";
 });
 
 document.getElementById("tab4").addEventListener("click", function(event) {
@@ -42,7 +42,7 @@ document.getElementById("tab4").addEventListener("click", function(event) {
     document.getElementById("dialer").style.display = "none";
     document.getElementById("contact_list").style.display = "none";
     document.getElementById("newContact").style.display = "none";
-    document.getElementById("testgestures").style.display = "block";
+    document.getElementById("aboutarea").style.display = "block";
 });
 
 // Function to validate input and allow only numbers

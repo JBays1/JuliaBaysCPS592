@@ -1,0 +1,207 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* High contrast background color */
+    color: #fff; /* High contrast text color */
+    font-size: 22px; /* Large font size */
+}
+
+/* Headings */
+h1 {
+    color: #fff;
+    font-size: 36px; /* Larger font size for headings */
+}
+
+/* Tab Bar */
+#tab_bar {
+    background-color: #0070b3; /* Adjusted blue color for high contrast */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Tab Button */
+.tabButton {
+    background-color: #fff;
+    color: #0070b3; /* Adjusted blue color for high contrast */
+    border: 1px solid #0070b3; /* Adjusted border color for high contrast */
+    padding: 15px 20px; /* Increase padding for larger buttons */
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Larger font size for buttons */
+}
+
+.tabButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    color: #fff;
+}
+
+/* Content */
+#content {
+    margin-top: 20px;
+}
+
+/* Text Inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #fff; /* High contrast border */
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000; /* Font color */
+    background-color: #fff; /* High contrast background color */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0070b3; /* Border color on focus */
+}
+
+/* Dialer */
+#dialer {
+    text-align: center;
+}
+
+#dialerText {
+    width: 80%;
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid #0070b3; /* Adjusted blue color for high contrast */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Tables */
+table {
+    margin-top: 20px;
+}
+
+table button {
+    background-color: #0070b3; /* Adjusted blue color for high contrast */
+    color: #7c5151;
+    border: none;
+    padding: 15px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+table button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Contact List */
+#contact_list {
+    text-align: center;
+}
+
+#newContact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    color: #fff; /* White font color for high contrast */
+}
+
+form label {
+    display: block;
+    margin: 15px 0 10px;
+    color: #fff; /* White font color for high contrast */
+    font-size: 22px; /* Larger font size */
+}
+
+/* Buttons */
+button {
+    background-color: #0070b3; /* Adjusted blue color for high contrast */
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    margin-right: 20px; /* Add margin between buttons */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 70%; /* Increased to make it more round */
+    font-size: 35px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Specific Color Dial Buttons */
+#dialClear,
+#dialDial,
+#addContact,
+#clearForm {
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+#dialClear {
+    background-color: rgb(249, 80, 80);
+}
+
+#dialClear:hover {
+    background-color: rgb(203, 42, 42);
+}
+
+#dialDial {
+    background-color: rgb(25, 161, 25);
+}
+
+#dialDial:hover {
+    background-color: rgb(13, 105, 13);
+}
+
+#addContact,
+#clearForm {
+    background-color: #0070b3; /* Adjusted blue color for high contrast */
+}
+
+#addContact:hover,
+#clearForm:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Gestures Area */
+#gestureArea {
+    width: 300px;
+    height: 150px;
+    background-color: rgba(199, 196, 230, 0.808);
+    border: 1px solid #fff; /* Change border color to increase contrast */
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#outputBox {
+    width: 200px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #fff; /* Change border color to increase contrast */
+    text-align: center;
+    line-height: 50px;
+    margin: -25px auto 0; /* Center the box horizontally and set top margin to 0 */
+}
+
+#aboutarea {
+    text-align: center;
+}
