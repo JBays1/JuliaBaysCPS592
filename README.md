@@ -18,7 +18,9 @@ This course focuses on exploring input and interaction techniques, with a strong
 - Adding a tab for gesture reading techniques with a mouse and keyboard
 - [Assignment 4](https://jbays1.github.io/JuliaBaysCPS592/assignment4) 
 - Creating a basic blog application app and running it through an accessibility checker and make changes accordingly to make the website easily readable
-
+- [Assignment 6](https://jbays1.github.io/JuliaBaysCPS592/assignment6) 
+- Adjusting the mock phone dialer to toggle between a site version that caters to low vision
+  
 ## Local Access
 ```bash
 $ node local.js
