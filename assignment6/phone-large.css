@@ -203,5 +203,10 @@ button:hover {
 }
 
 #aboutarea {
-    text-align: center;
-}
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #000;
+  }
