@@ -45,6 +45,18 @@ document.getElementById("tab4").addEventListener("click", function(event) {
     document.getElementById("aboutarea").style.display = "block";
 });
 
+// Toggles between index.html and index-large.html
+function toggleIndex() {
+    var link = document.getElementById("toggleButton");
+    if (link.getAttribute("href") === "index-large.html") {
+        link.setAttribute("href", "index.html");
+        link.textContent = "Go to Large Index";
+    } else {
+        link.setAttribute("href", "index-large.html");
+        link.textContent = "Go to Normal Index";
+    }
+}
+
 // Function to validate input and allow only numbers
 function validateInput(inputField) {
     // Remove non-numeric characters using a regular expression
