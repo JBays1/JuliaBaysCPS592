@@ -110,7 +110,7 @@ table button:hover {
 form {
     max-width: 300px;
     margin: 0 auto;
-    color: #fff; /* White font color for high contrast */
+    color: #000; /* White font color for high contrast */
 }
 
 form label {
