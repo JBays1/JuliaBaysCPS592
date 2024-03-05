@@ -1,6 +1,6 @@
 function showTab(tabId) {
     // Hide all tabs
-    var tabs = ["home", "projects", "about"];
+    var tabs = ["home", "about", "contributors"];
     tabs.forEach(function(tab) {
         document.getElementById(tab).style.display = "none";
     });
@@ -20,12 +20,12 @@ document.getElementById("tab1").addEventListener("click", function(event) {
 
 document.getElementById("tab2").addEventListener("click", function(event) {
     event.preventDefault();
-    showTab("projects");
+    showTab("about");
 });
 
 document.getElementById("tab3").addEventListener("click", function(event) {
     event.preventDefault();
-    showTab("about");
+    showTab("contributors");
 });
 
 /* Comment function */
