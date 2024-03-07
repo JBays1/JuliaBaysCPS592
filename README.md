@@ -20,6 +20,8 @@ This course focuses on exploring input and interaction techniques, with a strong
 - Creating a basic blog application app and running it through an accessibility checker and make changes accordingly to make the website easily readable
 - [Assignment 6](https://jbays1.github.io/JuliaBaysCPS592/assignment6) 
 - Adjusting the mock phone dialer to toggle between a site version that caters to low vision
+- [Assignment 7](https://jbays1.github.io/JuliaBaysCPS592/assignment7) 
+- This web application contains a chatbox using Google dialogflow for a basic smart tea kettle appliance.
   
 ## Local Access
 ```bash
