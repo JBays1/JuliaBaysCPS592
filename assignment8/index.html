@@ -1,163 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuliaBaysCPS592</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--link to the js-->
-    <script src="local.js"></script>
-    <!--link to the css -->
-    <link rel="stylesheet" href="blog.css" type="text/css" />
+	<title>
+		Calculator Demo
+	</title>
+	<link rel="stylesheet" href="calculator.css" type="text/css">
 </head>
 
-<!-- Navigation Tab Buttons -->
-<div id="tab_bar" role="navigation">
-    <button class="tabButton" id="tab1" aria-label="Home">Home</button>
-    <button class="tabButton" id="tab2" aria-label="About">About this Website</button>
-    <button class="tabButton" id="tab3" aria-label="Contributors">Contributors</button>
-</div>
+<body>
 
-<!-- Main Content Section -->
-<main role="main">
+	<!-- Navigation Tab Buttons -->
+	<div id="tab_bar" role="navigation" style="display: flex; justify-content: center;">
+		<button class="tabButton" id="tab1" aria-label="Home">Home</button>
+		<button class="tabButton" id="tab2" aria-label="About">About this App</button>
+		<button class="tabButton" id="tab3" aria-label="Contributors">Contributors</button>
+	</div>
 
-    <!-- Home Section -->
-    <div id="home" class="tabContent" aria-labelledby="tab1">
+	<!-- Main Content Section -->
+	<main role="main">
 
-        <h2>Tea Kettle Chat Box</h2>
+		<!-- Home Section -->
+		<br>
+		<br>
+		<div id="home" class="tabContent" aria-labelledby="tab1">
+			<div id="calculator">
+				<h1>calculator</h1>
+				<div class="calculator_row">
+					<input id="number_input">
+				</div>
+				<div class="calculator_row">
+					<button id="button7" class="calcButton row1 col1">7</button>
+					<button id="button8" class="calcButton row1 col2">8</button>
+					<button id="button9" class="calcButton row1 col3">9</button>
+					<button id="buttonDivide" class="calcButton row1 col4 function">/</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button4" class="calcButton row2 col1">4</button>
+					<button id="button5" class="calcButton row2 col2">5</button>
+					<button id="button6" class="calcButton row2 col3">6</button>
+					<button id="buttonMultiply" class="calcButton row2 col4 function">*</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button1" class="calcButton row3 col1">1</button>
+					<button id="button2" class="calcButton row3 col2">2</button>
+					<button id="button3" class="calcButton row3 col3">3</button>
+					<button id="buttonAdd" class="calcButton row3 col4 function">+</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button0" class="calcButton row4 col1">0</button>
+					<button id="buttonClear" class="calcButton row4 col2 meta">C</button>
+					<button id="buttonEquals" class="calcButton row4 col3 meta">=</button>
+					<button id="buttonSubtract" class="calcButton row4 col4 function">-</button>
+				</div>
+			</div>
 
-        <p>Provided are some phrases you can ask the chat box:</p>
-        <li> Turn on/off the tea kettle.</li>
-        <li> Options for tea types?</li>
-        <li> Choosing a tea.</li>
-        <li> Please make the tea temperature at... Celsius/Fahrenheit.</li>
-        <li> Turn up/down the tea temperature at ... Celsius/Fahrenheit.</li>
-        <li> Is the tea boiling?</li>
-        <li> Is the tea done?</li>
-        <br><br>
+		<div id="about" class="tabContent" aria-labelledby="tab2">
+			<!-- Content for the About tab -->
+			<h2>About Section</h2>
+	
+			<p>
+	
+				This web application contains a chatbox using Google dialogflow for a basic smart tea kettle appliance.
+				You can ask it simple questions like turning the kettle on or off, selecting tea options, adjusting the
+				temperature, and checking if the tea is boiling or if the tea is ready.
+	
+			</p>
+			<!-- Add your content here -->
+		</div>
+	
+		<div id="contributors" class="tabContent" aria-labelledby="tab3">
+			<!-- Content for the About tab -->
+			<h2>Contributor Section</h2>
+	
+			<li>Julia Bays</li>
+			<!-- Add your content here -->
+		</div>
 
-        <div style="display: flex; justify-content: center;">
-            <iframe allow="microphone;" width="350" height="430"
-                src="https://console.dialogflow.com/api-client/demo/embedded/0e5f0fb4-bd48-4a72-b7fe-3f139718643c">
-            </iframe>
-        </div>
-
-
-        <br><br>
-        <h2>Initial tea kettle chat box set up: </h2>
-        <p>Here is the original beginning set up I have for the chat box:</p>
-        <li> Turn on/off tea kettle.</li>
-        <li> Provided options for tea types.</li>
-        <li> Choose the tea you want.</li>
-
-        <h2>After test 1: </h2>
-
-        <p>What worked well in user test 1: </p>
-        <ul>
-            <li> User used various versions of the provided questions.</li>
-            <li> User preferred simpler responses like "kettle on/off."</li>
-            <li> User liked the feedback received when selecting a specific tea.</li>
-        </ul>
-
-        <p>Issues identified in user test 1: </p>
-        <ul>
-            <li> Some phrases didn't trigger correct responses, leading to empty responses.</li>
-            <li> Missing a completion state before turning off the tea kettle in the dialog tree.</li>
-            <li> Spelling and grammatical errors were found.</li>
-            <li> The chat box location is not easy to read on the screen.</li>
-        </ul>
-
-        <p>Improvements made after user test 1: </p>
-        <ul>
-            <li> Added more training phrases within the intents.</li>
-            <li> Added phrases/intents for: "Is the tea done yet?"</li>
-            <li> Revised wording in responses for clarity.</li>
-        </ul>
-
-        <h2>After test 2: </h2>
-
-        <p>What worked well in user test 2: </p>
-        <ul>
-            <li> User used different variations of the provided questions.</li>
-            <li> User provided more detailed responses, including filler words like "please."</li>
-            <li> User appreciated the ease of use of the chat box.</li>
-        </ul>
-
-        <p>Issues identified in user test 2: </p>
-        <ul>
-            <li> Some phrases still didn't trigger correct responses, resulting in empty responses.</li>
-            <li> Added more phrases for temperature changes.</li>
-            <li> Spelling and grammatical errors were still present.</li>
-        </ul>
-
-        <p>Improvements made after user test 2: </p>
-        <ul>
-            <li> Created/Added more training phrases within the intents.</li>
-            <li> Added phrases/intents for: "Please make the tea temperature at... Celsius/Fahrenheit."</li>
-            <li> Added phrases/intents for: "Increase/decrease temperature."</li>
-            <li> Revised and simplified responses for clarity.</li>
-        </ul>
-
-        <h2>After test 3: </h2>
-
-        <p>What worked well in user test 3: </p>
-        <ul>
-            <li> User used different variations of the provided questions.</li>
-            <li> User provided shorter responses.</li>
-            <li> User still experienced some empty responses.</li>
-            <li> User appreciated the flexibility of the chat bot, which was intuitive with small misspellings.</li>
-        </ul>
-
-        <p>Issues identified in user test 3: </p>
-        <ul>
-            <li> Some phrases still didn't trigger correct responses, leading to empty responses.</li>
-            <li> User asked if the tea was in the boiling stage.</li>
-            <li> More spelling and grammatical errors were found in responses.</li>
-        </ul>
-
-        <p>Improvements made after user test 3: </p>
-        <ul>
-            <li> Provided additional training phrases within the intents.</li>
-            <li> Added intent for the stage of tea kettle.</li>
-            <li> Added phrases/intents for: "Is the tea boiling?"</li>
-            <li> Fixed spelling errors in responses.</li>
-        </ul>
-
-
-    </div>
-
-    <div id="about" class="tabContent" aria-labelledby="tab2">
-        <!-- Content for the About tab -->
-        <h2>About Section</h2>
-
-        <p>
-
-            This web application contains a chatbox using Google dialogflow for a basic smart tea kettle appliance.
-            You can ask it simple questions like turning the kettle on or off, selecting tea options, adjusting the
-            temperature, and checking if the tea is boiling or if the tea is ready.
-
-        </p>
-        <!-- Add your content here -->
-    </div>
-
-    <div id="contributors" class="tabContent" aria-labelledby="tab3">
-        <!-- Content for the About tab -->
-        <h2>Contributor Section</h2>
-
-        <li>Julia Bays</li>
-        <!-- Add your content here -->
-    </div>
-
-</main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="blog.js"></script>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+	<script src="calculator.js" type="text/javascript"></script>
 </body>
 
 </html>

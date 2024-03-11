@@ -17,6 +17,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     padding: 10px;
+	justify-content: center;
     role: navigation; /* Add a semantic role for better accessibility */
 }
 
@@ -94,56 +95,36 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Comment Form */
-#commentForm {
-    margin-top: 20px;
+
+/*Reference Code: Dr. Poor*/
+body {
+	font-family: helvetica, arial, sans-serif; margin: 16px;
 }
 
-#commentForm label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333; /* Adjust text color for better contrast */
+div#calculator {
+	justify-content: center;
 }
 
-#commentForm input[type="text"],
-#commentForm input[type="email"],
-#commentForm textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    color: #333; /* Adjust text color for better contrast */
-    background-color: #fff; /* Set background color to white */
-    border: 1px solid #ccc; /* Add a border for better visibility */
-    border-radius: 5px;
+#calculator { background: #ccc; padding: 16px; width: 462px; text-align: center; border: 3px solid black}
+
+#calculator h1 { font-size: large; font-family: helvetica, arial, sans-serif; }
+
+.calculator_row { margin-bottom: 8px;}
+.calculator_row button { font-size: xx-large; padding: 10px; width: 100px; background: #eee; border: 2px solid black; font-family: ocr-a, consolas, monospaced; font-weight: bold; margin: 5px;}
+
+button.meta { background: red; color: white;}
+button.function { background: darkblue; color: white;}
+button:active { background: orange; color: black;}
+
+button.cursor { background: yellow; color: black;}
+
+#number_input { font-size: xx-large; font-family: ocr-a, consolas, monospaced; background: azure; padding: 8px; text-align: right; width: 416px; font-weight: bold; border: 2px solid black; height: 50px; }
+
+label {
+	display: inline-block; width: 50px; font-weight: bold;
 }
 
-#commentForm button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bb5; /* Adjusted blue color for the button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Display Comments */
-#comments {
-    margin-top: 20px;
-}
-
-.comment {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #333; /* Adjust text color for better contrast */
-}
-
-.comment p {
-    margin: 5px 0;
-}
-
-.comment .name,
-.comment .email {
-    font-weight: bold;
+#settings {
+	border: 1px solid black;
+	padding: 10px;
 }
