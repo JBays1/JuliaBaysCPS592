@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #fff; /* Set background color to white */
+}
+
+h1 {
+    text-align: center; /* Center the h1 text */
+}
+
+/* Navigation Tab Buttons */
+#tab_bar {
+    background-color: #007bb5; /* Adjusted blue color for better contrast */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    role: navigation; /* Add a semantic role for better accessibility */
+}
+
+.tabButton {
+    background-color: #007bb5; /* Adjusted blue color for better contrast */
+    color: #fff; /* White text to contrast with the blue background */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for better user experience */
+}
+
+/* Improve focus styles for better keyboard navigation */
+.tabButton:focus {
+    outline: 2px solid #fff; /* White outline on focus for better visibility */
+}
+
+/* Hover effect */
+.tabButton:hover,
+.tabButton:focus {
+    background-color: #005d8e; /* Adjusted slightly darker blue on hover or focus */
+}
+
+.post {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #f9f9f9; /* Set background color to a light gray */
+}
+
+.post-title {
+    font-size: 24px;
+}
+
+.post-meta {
+    color: #333; /* Darker color for better contrast */
+    font-weight: bold; /* Increase font weight for better visibility */
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+/* links/projects css*/
+#projects h2 {
+    color: #333; /* Dark text color for the heading */
+}
+
+#projects a {
+    color: #007bb5; /* Adjusted blue color for the links */
+    font-weight: bold; /* Make the link text bold */
+    transition: color 0.3s; /* Smooth transition for link color change */
+}
+
+#projects a:hover {
+    color: #005d8e; /* Adjusted slightly darker blue on hover */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Comment Form */
+#commentForm {
+    margin-top: 20px;
+}
+
+#commentForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Adjust text color for better contrast */
+}
+
+#commentForm input[type="text"],
+#commentForm input[type="email"],
+#commentForm textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: #fff; /* Set background color to white */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 5px;
+}
+
+#commentForm button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bb5; /* Adjusted blue color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Display Comments */
+#comments {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #333; /* Adjust text color for better contrast */
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.comment .name,
+.comment .email {
+    font-weight: bold;
+}
