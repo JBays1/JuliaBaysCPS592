@@ -20,6 +20,13 @@ h1 {
     role: navigation; /* Add a semantic role for better accessibility */
 }
 
+.tabButton-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set height to full viewport height */
+}
+
 .tabButton {
     background-color: #007bb5; /* Adjusted blue color for better contrast */
     color: #fff; /* White text to contrast with the blue background */
@@ -148,10 +155,7 @@ th {
     font-weight: bold;
 }
 
-body {
-	font-family: helvetica, arial, sans-serif; margin: 16px;
-}
-#calculator { background: #ccc; padding: 16px; width: 462px; text-align: center; border: 3px solid black}
+#calculator { background: #ccc; padding: 16px; width: 462px; text-align: center; border: 3px solid black;margin-left: 141px;}
 
 #calculator h1 { font-size: large; font-family: helvetica, arial, sans-serif; }
 
@@ -173,4 +177,6 @@ label {
 #settings {
 	border: 1px solid black;
 	padding: 10px;
+    justify-content: center
 }
+
