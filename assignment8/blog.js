@@ -23,12 +23,6 @@ document.getElementById("tab2").addEventListener("click", function(event) {
     showTab("about");
 });
 
-document.getElementById("tab3").addEventListener("click", function(event) {
-    event.preventDefault();
-    showTab("contributors");
-});
-
-// Reference code: by Dr. Poor
 // this gives us the order of the buttons, which we can use to step through the buttons in various directions
 // since we know the layout, + 1 moves to the next item, -1 previous, +4 is one row down, -4 is one row up
 buttonOrder = ["#button7","#button8","#button9","#buttonDivide","#button4","#button5","#button6","#buttonMultiply","#button1","#button2","#button3","#buttonAdd","#button0","#buttonClear","#buttonEquals","#buttonSubtract"];
@@ -206,3 +200,43 @@ function evaluateExpression(first,op,second) {
 	$("#number_input").val(output.toString());
 	// deal with state elsewhere
 }
+
+document.getElementById("tab3").addEventListener("click", function(event) {
+    event.preventDefault();
+    showTab("contributors");
+});
+
+/* Comment function */
+function submitComment() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var comment = document.getElementById("comment").value;
+
+    if (comment.trim() !== "") {
+        // Display the alert
+        alert("Thank you for your comment!");
+
+        // Display the comment below
+        var commentsContainer = document.getElementById("comments");
+        var newComment = document.createElement("div");
+        newComment.classList.add("comment");
+
+        var commenterInfo = document.createElement("p");
+        commenterInfo.innerHTML = "<span class='name'>Name: " + name + "</span>, <span class='email'>Email: " + email + "</span>";
+
+        var commentContent = document.createElement("p");
+        commentContent.textContent = comment;
+
+        newComment.appendChild(commenterInfo);
+        newComment.appendChild(commentContent);
+        commentsContainer.appendChild(newComment);
+
+        // Clear the form fields after submitting
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("comment").value = "";
+    } else {
+        alert("Please enter a comment before submitting.");
+    }
+}
+
