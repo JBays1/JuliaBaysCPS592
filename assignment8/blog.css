@@ -182,19 +182,16 @@ label {
 
 /* CSS for Arrow Keys and Select Button */
 .arrowKeys {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 20px;
 }
 
 .arrowRow {
     display: flex;
     justify-content: center;
-    margin: 5px 0;
+    margin-bottom: 10px; /* Adjust the margin between rows */
 }
 
-.arrowButton,
-.selectButton {
+.arrowButton, .selectButton {
     padding: 10px 20px;
     font-size: 18px;
     border: 2px solid #333;
@@ -203,17 +200,28 @@ label {
     color: #333;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin: 0 5px; /* Adjust the margin here */
+    margin: 0 5px; /* Adjust the margin between buttons */
 }
 
-.arrowButton:hover,
-.selectButton:hover {
+.arrowButton:hover, .selectButton:hover {
     background-color: #333;
     color: #fff;
 }
 
 /* Additional CSS for spacing and alignment */
-h2 {
+h2, p {
     text-align: center;
     margin-top: 20px;
+}
+
+.testContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px; /* Adjust the margin between test pairs */
+}
+
+/* Style for each individual test */
+.testContainer > div {
+    flex: 1;
+    margin: 0 10px; /* Adjust the spacing between tests */
 }

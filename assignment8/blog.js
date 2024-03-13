@@ -351,33 +351,33 @@ document.getElementById("selectButton2").addEventListener("click", function () {
 });
 
 var rightButton = document.getElementById("rightButton_1");
-var lastTapTime = 0;
+var lastMouseDownTime = 0;
+var timeoutId = null;
 
-rightButton.addEventListener("click", function (event) {
-  var currentTime = new Date().getTime();
-  if (currentTime - lastTapTime < 300) {
-    // 300 milliseconds threshold for double tap
-    // Double tap detected
+rightButton.addEventListener("mousedown", function (event) {
+  lastMouseDownTime = new Date().getTime();
+  timeoutId = setTimeout(function () {
     clickSelectedItem();
-  } else {
-    // Single tap detected
+    clearTimeout(timeoutId);
+  }, 1000); // Adjust the duration for long press here
+});
+
+rightButton.addEventListener("mouseup", function (event) {
+  clearTimeout(timeoutId);
+  var currentTime = new Date().getTime();
+  if (currentTime - lastMouseDownTime < 500) {
+    // Short tap detected
     selectNext();
   }
-  lastTapTime = currentTime;
 });
 
 // Arrow key navigation for single tap
 document.addEventListener("keydown", function (event) {
-  if (event.key === "ArrowRight") {
+  if (event.key === "ArrowRight" || event.key === ".") {
     var currentTime = new Date().getTime();
-    if (currentTime - lastTapTime < 300) {
-      // 300 milliseconds threshold for double tap
-      // Double tap detected
-      clickSelectedItem();
-    } else {
-      // Single tap detected
+    if (currentTime - lastMouseDownTime < 500) {
+      // Short tap detected
       selectNext();
     }
-    lastTapTime = currentTime;
   }
 });

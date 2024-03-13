@@ -21,7 +21,7 @@
 <div id="tab_bar" role="navigation">
     <button class="tabButton" id="tab1" aria-label="Home">Home</button>
     <button class="tabButton" id="tab2" aria-label="About">About this App</button>
-    <button class="tabButton" id="tab3" aria-label="Contributors">Contributors</button>
+    <button class="tabButton" id="tab3" aria-label="Contributors">Contributor</button>
 </div>
 
 <!-- Main Content Section -->
@@ -31,9 +31,8 @@
     <div id="home" class="tabContent" aria-labelledby="tab1">
 
         <br>
-        <br>
         <div id="calculator">
-            <h1>calc U l8r</h1>
+            <h1>Calculator</h1>
             <div class="calculator_row">
                 <input id="number_input">
             </div>
@@ -64,71 +63,90 @@
         </div>
 
         <br>
-        <br>
-        <h2>5 Key button test</h2>
-        <!-- Arrow Keys and Select Button -->
-        <div class="arrowKeys">
-            <div class="arrowRow">
-                <button class="arrowButton" id="upButton">↑</button>
+        <div class="testContainer">
+            <div>
+                <h2>5 Key button test</h2>
+                <!-- Arrow Keys and Select Button -->
+                <div class="arrowKeys">
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="upButton">↑</button>
+                    </div>
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="leftButton">←</button>
+                        <button class="selectButton" id="selectButton">Select</button>
+                        <button class="arrowButton" id="rightButton">→</button>
+                    </div>
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="downButton">↓</button>
+                    </div>
+                </div>
             </div>
-            <div class="arrowRow">
-                <button class="arrowButton" id="leftButton">←</button>
-                <button class="selectButton" id="selectButton">Select</button>
-                <button class="arrowButton" id="rightButton">→</button>
+
+            <div>
+                <h2>3 Key button test</h2>
+                <!-- Arrow Keys and Select Button -->
+                <div class="arrowKeys">
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="leftButton3">←</button>
+                        <button class="selectButton" id="selectButton3">Select</button>
+                        <button class="arrowButton" id="rightButton3">→</button>
+                    </div>
+                </div>
             </div>
-            <div class="arrowRow">
-                <button class="arrowButton" id="downButton">↓</button>
+
+            <div>
+                <h2>2 Key button test</h2>
+                <!-- Arrow Keys and Select Button -->
+                <div class="arrowKeys">
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="rightButton2">→</button>
+                        <button class="selectButton" id="selectButton2">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>1 Key button test</h2>
+                <p>1 tap selects to the right and 1 hold selects the item</p>
+                <!-- Arrow Keys and Select Button -->
+                <div class="arrowKeys">
+                    <div class="arrowRow">
+                        <button class="arrowButton" id="rightButton_1">Move/Select</button>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <br>
-        <br>
-        <h2>3 Key button test</h2>
-        <!-- Arrow Keys and Select Button -->
-        <div class="arrowKeys">
-            <div class="arrowRow">
-                <button class="arrowButton" id="leftButton3">←</button>
-                <button class="selectButton" id="selectButton3">Select</button>
-                <button class="arrowButton" id="rightButton3">→</button>
-            </div>
-        </div>
-
-        <br>
-        <br>
-        <h2>2 Key button test</h2>
-        <!-- Arrow Keys and Select Button -->
-        <div class="arrowKeys">
-            <div class="arrowRow">
-                <button class="arrowButton" id="rightButton2">→</button>
-                <button class="selectButton" id="selectButton2">Select</button>
-            </div>
-        </div>
-
-        <br>
-        <br>
-        <h2>1 Key button test</h2>
-        <p>1 tap is right next; 2 quick taps is select</p>
-        <!-- Arrow Keys and Select Button -->
-        <div class="arrowKeys">
-            <div class="arrowRow">
-                <button class="arrowButton" id="rightButton_1">.</button>
-            </div>
-        </div>
-
-
     </div>
 
     <div id="about" class="tabContent" aria-labelledby="tab2">
         <!-- Content for the About tab -->
-        <h2>About Section</h2>
+        <h1>About Section</h1>
+
+        <h2>Introduction:</h2>
 
         <p>
 
-            This web application contains a chatbox using Google dialogflow for a basic smart tea kettle appliance.
-            You can ask it simple questions like turning the kettle on or off, selecting tea options, adjusting the
-            temperature, and checking if the tea is boiling or if the tea is ready.
+            Welcome to our basic calculator web application! In this tool, 
+            we'll be utilizing a set of limited keys/buttons to navigate and interact with the calculator functions.
 
         </p>
+
+        <h2>Tests:</h2>
+        <li>5 Key button test: This section presents a comprehensive set of navigation buttons including Up, Down, Left, and Right arrows along with a Select button. These buttons enable users to explore all directions within the calculator interface.</li><br><br>
+        <li>3 Key button test: In this section, we simplify the navigation by focusing on three primary directions: Left, Right, and Select. This streamlined approach offers a more targeted way to interact with the calculator.</li><br><br>
+        <li>2 Key button test: Here, we further simplify the navigation by reducing the buttons to just two: Right and Select. Despite having fewer options, users can still effectively navigate and make selections within the calculator.</li><br><br>
+        <li>1 Key button test: Finally, in the last section, we introduce a single button for navigation and selection. A single tap moves the cursor to the right, while holding down the button selects the item. This minimalistic approach offers a unique way to interact with the calculator using only one key/button.</li><br><br>
+        
+        <h2>Mini Test 1: Different Speeds</h2>
+        <p>(3-5 times) For each trial, record the time needed to complete the entire protocol and count any errors that occur. To simulate real-world use, if the user makes an error, they should re-try until they successfully enter the equation
+            - A description of your test. What conditions did you test? What were the example problems?
+- A description of the results. What were the average times and number of errors for each of the two conditions? What can we conclude from these results?
+        </p>
+
+        <h2>Mini Test 1: Back of Hand vs Elbow</h2>
+        <p></p>
+
+
         <!-- Add your content here -->
     </div>
 
