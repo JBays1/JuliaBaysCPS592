@@ -302,20 +302,6 @@ document.getElementById("selectButton").addEventListener("click", function () {
   clickSelectedItem();
 });
 
-document.addEventListener("keydown", function (event) {
-  switch (event.key) {
-    case "ArrowLeft":
-      selectPrevious();
-      break;
-    case "ArrowRight":
-      selectNext();
-      break;
-    case "Enter":
-      clickSelectedItem();
-      break;
-  }
-});
-
 // HTML Arrow Buttons Event Listeners
 document.getElementById("leftButton3").addEventListener("click", function () {
   selectPrevious();
@@ -327,18 +313,6 @@ document.getElementById("rightButton3").addEventListener("click", function () {
 
 document.getElementById("selectButton3").addEventListener("click", function () {
   clickSelectedItem();
-});
-
-// Arrow key navigation for calculator buttons and HTML arrow buttons
-document.addEventListener("keydown", function (event) {
-  switch (event.key) {
-    case "ArrowRight":
-      selectNext();
-      break;
-    case "Enter":
-      clickSelectedItem();
-      break;
-  }
 });
 
 // HTML Arrow Buttons Event Listeners
